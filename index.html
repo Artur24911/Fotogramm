@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogramm</title>
+    <link rel="icon" type="image/x-icon" href="../assets/icons/Group (2).png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="fonts" href="./assets/fonts/fonts.css">
+    <script defer src="./pics.js"></script>
+</head>
+
+<body onload="init()">
+    <header class="header">
+        <img src="./assets/icons/Capa_1.png" alt="Fotogramm Logo">
+    </header>
+
+    <main>
+        <h1>Your Personal photo album</h1>
+        <section id="pics-img" class="pics">
+
+        </section>
+        <dialog id="open-pics">
+            <div id="open-pics-top">
+                <p id="pic-name"></p>
+                <button id="button-close" tabindex="0" type="button"><img src="./assets/icons/X.png" alt="Close"></button>
+            </div>
+            <div id="open-pics-middle">
+                <img src="./assets/img/Buggy in a Race.jpg" alt="Buggy in a Race">
+            </div>
+            <div id="open-pics-bottom">
+
+                <button id="button-back" tabindex="0" type="button"><img src="./assets/icons/pfeil.png" alt="pfeil zurück" id="button-back"></button>
+
+
+                <span id="gallery-counter"></span>
+
+                <button id="button-forward" tabindex="0" type="button"><img src="./assets/icons/pfeil.png" alt="pfeil vor" id="button-forward"></button>
+
+            </div>
+
+        </dialog>
+    </main>
+
+
+
+    <footer>
+        <img src="./assets/icons/Frame 6.png" alt="Logo Developer Akademie">
+    </footer>
+
+</body>
+
+</html>

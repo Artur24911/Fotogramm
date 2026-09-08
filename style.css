@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 56px;
+    font-family: 'Figtree';
+    font-weight: 800;
+    padding: 60px 0px;
+}
+
+p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-family: 'Figtree';
+    font-weight: 700;
+
+}
+
+body {
+    background-color: rgba(6, 23, 30, 1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+button {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    Display: flex;
+    height: 81px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(9, 33, 42, 1);
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0px;
+}
+
+
+.pics>img {
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    border: 2px solid rgba(18, 70, 88, 1);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.pics>img:hover {
+    scale: 1.2;
+}
+
+.pics {             
+    gap: 16px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+dialog {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    Background-color: rgba(9, 33, 42, 1);
+    padding: 10px 40px;
+    border-radius: 16px;
+    max-width: 900px;
+    max-height: 800px;
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    width: 80vw;
+    height: 80vh;
+
+}
+
+#open-pics::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#open-pics[open] {
+    display: flex;
+}
+
+#open-pics-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#open-pics-top>button {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+}
+
+#open-pics-top>button:hover {
+    background-color: rgba(18, 70, 88, 1);
+    cursor: pointer;
+}
+
+#open-pics-top>button:active {
+    background-color: rgba(13, 50, 64, 1);
+}
+
+#open-pics-middle {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    min-height: 0;
+}
+
+#open-pics-middle>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#open-pics-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: white;
+    font-family: 'Figtee';
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#open-pics-bottom>button {
+    background-color: rgba(253, 91, 79, 0.2);
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+}
+
+#open-pics-bottom>button:hover {
+    background-color: rgba(253, 91, 79, 0.3);
+    cursor: pointer;
+}
+
+#button-back {
+    transform: rotate(270deg);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 128px;
+    background-color: rgba(9, 33, 42, 1);
+    border-top-left-radius: 50% 15px;
+    border-top-right-radius: 50% 15px;
+}
+
+@media screen and (min-width: 1440px) {
+
+    .header {
+        padding: 0px max(130px, calc(50% - 720px));
+    }
+
+    main {
+        padding: 0px max(130px, calc(50% - 720px));
+    }
+
+    .pics {
+        padding: 0px max(130px, calc(50% - 720px));
+    }
+
+    footer {
+        padding: 0px max(130px, calc(50% - 720px));
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1439px) {
+
+    .header {
+        padding: 0px 30px;
+    }
+
+    main {
+        padding: 0px 30px;
+    }
+
+    .pics {
+        padding: 0px 30px;
+    }
+
+    footer {
+        padding: 0px 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1{
+        padding: 50px 0px;
+        font-size: 36px;
+       
+    }
+    .header {
+        padding: 0px 10px;
+        justify-content: center;
+
+    }
+
+    main {
+        padding: 0px 10px;
+        padding-top: 0px;
+        padding-bottom: 30px;
+    }
+
+    .pics {
+        padding: 0px 10px;
+    }
+    dialog{
+        height: 60vh;
+    }
+
+    footer {
+        padding: 0px 10px;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+}
+
+#button-back>img{
+    width: 15px;
+}
+
+#button-forward>img{
+    width: 15px;
+}
+#open-pics-bottom>button{
+    width: 30px;
+    height: 30px;
+}
+#open-pics-bottom{
+    gap: 25px;
+}
+}
