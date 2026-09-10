@@ -152,6 +152,11 @@ dialog {
     font-weight: 500;
 }
 
+#open-pics-bottom>span{
+    min-width: 45px;
+    text-align: center;
+}
+
 #open-pics-bottom>button {
     background-color: rgba(253, 91, 79, 0.2);
     border-radius: 100%;

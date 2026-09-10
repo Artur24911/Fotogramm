@@ -42,7 +42,7 @@ function initLightbox() {
             const index = Number(imgEl.dataset.index)
             openLightbox(index)
         });
-        // Tastatur-Zugriff: Enter oder Leertaste öffnet die Lightbox
+    
         imgEl.addEventListener("keydown", (e) => {
             if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();
